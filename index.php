@@ -16,12 +16,6 @@ $arrContextOptions=array(
 );  
 
 
-
-
-//$W_Url = file_get_html("http://www.covidmaroc.ma/Pages/AccueilAR.aspx");
-//$Corona    = str_replace(' ', '', $W_Url->find('div[class=menulangue0]',0)->plaintext);
-
-
 $MA = 'https://moroccostats.herokuapp.com/stats/coronavirus/countries/morocco/'; // path to your JSON file
 $MAdata = file_get_contents($MA, false, stream_context_create($arrContextOptions)); // put the contents of the file into a variable
 $Morocco = json_decode($MAdata, true); // decode the JSON feed
